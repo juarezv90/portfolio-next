@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import { proImages } from "../public/assets/projects/projectImages";
 import ProjectsItems from "./ProjectsItems";
@@ -13,7 +11,7 @@ const Projects = () => {
         </p>
         <h2 className="py-4">What I've Built</h2>
         <div className="grid md:grid-cols-2 gap-8">
-            <ProjectsItems title="MTG Builder" background={proImages.mox} projectUrl="/url" />
+            <ProjectsItems title="MTG Builder" background={proImages.mox} projectUrl="/Mtgpage" />
             <ProjectsItems title="Color Finder" background={proImages.colorFinder} projectUrl="/url" />
             <ProjectsItems title="ToDo List Maker" background={proImages.toDoLister} projectUrl="/url" />
         </div>
