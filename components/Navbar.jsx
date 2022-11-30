@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/Ai";
-import { FaGithub, FaLinkedinIn } from "react-icons/Fa";
-import { BsFillPersonLinesFill } from "react-icons/Bs";
+import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { BsFillPersonLinesFill } from "react-icons/bs";
 import logo from "../public/assets/logo/logowtitle.svg";
-import logoNo from "../public/assets/logo/logo.svg";
 import { useRouter } from "next/router";
 
 
