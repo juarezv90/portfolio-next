@@ -3,7 +3,6 @@ import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/Ai";
 import { FaGithub, FaLinkedinIn } from "react-icons/Fa";
 import { BsFillPersonLinesFill } from "react-icons/Bs";
 
-
 const Main = () => {
   return (
     <div id="home" className="w-full h-screen text-center">
@@ -22,15 +21,24 @@ const Main = () => {
             blanditiis, officia recusandae tempora vel quibusdam commodi
             cupiditate voluptas aperiam maxime eaque repellat et.
           </p>
+
           <div className="flex items-center justify-between max-w-[330px] m-auto py-4">
+            <a
+              href="https://www.linkedin.com/in/victor-juarez-b7a04b22a/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                <FaLinkedinIn />
+              </div>
+            </a>
+            <a href="https://github.com/juarezv90" target="_blank">
+              <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                <FaGithub />
+              </div>
+            </a>
             <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-              <FaLinkedinIn />
-            </div>
-            <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-              <FaGithub />
-            </div>
-            <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-              <AiOutlineMail/>
+              <AiOutlineMail />
             </div>
             <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
               <BsFillPersonLinesFill />

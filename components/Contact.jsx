@@ -35,12 +35,20 @@ const Contact = () => {
               <div>
                 <p className=" uppercase pt-8">Connect with me</p>
                 <div className=" flex items-center justify-between py-4">
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                    <FaLinkedinIn />
-                  </div>
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                    <FaGithub />
-                  </div>
+                  <a
+                    href="https://www.linkedin.com/in/victor-juarez-b7a04b22a/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                      <FaLinkedinIn />
+                    </div>
+                  </a>
+                  <a href="https://github.com/juarezv90" target="_blank">
+                    <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                      <FaGithub />
+                    </div>
+                  </a>
                   <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                     <AiOutlineMail />
                   </div>
@@ -106,7 +114,7 @@ const Contact = () => {
       <div className="flex justify-center py-12">
         <Link href="/">
           <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-            <HiOutlineChevronDoubleUp className="text-[#5651e5] " size={30}/>
+            <HiOutlineChevronDoubleUp className="text-[#5651e5] " size={30} />
           </div>
         </Link>
       </div>
