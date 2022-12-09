@@ -1,6 +1,6 @@
 import React from "react";
-import { proImages } from "../public/assets/projects/projectImages";
 import ProjectsItems from "./ProjectsItems";
+import { projects } from "./functions/projects"
 
 const Projects = () => {
   return (
@@ -11,9 +11,7 @@ const Projects = () => {
         </p>
         <h2 className="py-4">What I've Built</h2>
         <div className="grid md:grid-cols-2 gap-8">
-            <ProjectsItems title="MTG Builder" background={proImages.mox} projectUrl="/Mtgpage" />
-            <ProjectsItems title="Color Finder" background={proImages.colorFinder} projectUrl="/url" />
-            <ProjectsItems title="ToDo List Maker" background={proImages.toDoLister} projectUrl="/url" />
+            <ProjectsItems type={projects.mox.primary_lang} title={projects.mox.title} background={projects.mox.image} projectUrl="/Mtgapp" />
         </div>
       </div>
     </div>

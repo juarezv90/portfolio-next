@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import { skills } from "../public/assets/skills/skills";
 
 const Skills = () => {
   return (
@@ -14,7 +13,7 @@ const Skills = () => {
           <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
-                <Image src={skills.html} alt="/" width="64" height="64" />
+                <Image src={"/assets/skills/html.svg"} alt="/" width="64" height="64" />
               </div>
               <div className="flex flex-col items-center justify-center">
                 <h3>HTML</h3>
@@ -24,7 +23,7 @@ const Skills = () => {
           <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
-                <Image src={skills.css} alt="/" width="64" height="64" />
+                <Image src={"/assets/skills/css3.svg"} alt="/" width="64" height="64" />
               </div>
               <div className="flex flex-col items-center justify-center">
                 <h3>CSS</h3>
@@ -34,7 +33,7 @@ const Skills = () => {
           <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
-                <Image src={skills.javascript} alt="/" width="64" height="64" />
+                <Image src={"/assets/skills/javascript.svg"} alt="/" width="64" height="64" />
               </div>
               <div className="flex flex-col items-center justify-center">
                 <h3>Javascript</h3>
@@ -44,7 +43,7 @@ const Skills = () => {
           <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
-                <Image src={skills.react} alt="/" width="64" height="64" />
+                <Image src={"/assets/skills/react.svg"} alt="/" width="64" height="64" />
               </div>
               <div className="flex flex-col items-center justify-center">
                 <h3>React</h3>
@@ -54,7 +53,7 @@ const Skills = () => {
           <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
-                <Image src={skills.gitHub} alt="/" width="64" height="64" />
+                <Image src={"/assets/skills/github.svg"} alt="/" width="64" height="64" />
               </div>
               <div className="flex flex-col items-center justify-center">
                 <h3>Github</h3>
@@ -64,7 +63,7 @@ const Skills = () => {
           <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
-                <Image src={skills.java} alt="/" width="64" height="64" />
+                <Image src={"/assets/skills/java.svg"} alt="/" width="64" height="64" />
               </div>
               <div className="flex flex-col items-center justify-center">
                 <h3>Java</h3>

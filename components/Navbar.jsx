@@ -17,7 +17,7 @@ const Navbar = () => {
   const router = useRouter();
 
   useEffect(() => {
-    if (router.asPath === '/Mtgpage') {
+    if (router.asPath === '/Mtgapp') {
       setNavBG('transparent')
       setLinkColor('#ecf0f3')
     } else {
