@@ -19,8 +19,8 @@ const Contact = () => {
             <div className=" lg:p-4 h-full">
               <div>
                 <img
-                  className="rounded-xl hover:scale-105 ease-in duration-300"
-                  src="https://plus.unsplash.com/premium_photo-1666998556443-d339285f7fcc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2021&q=80"
+                  className="rounded-xl hover:scale-105 ease-in duration-300 max-h-[500px] mx-auto"
+                  src="/assets/profile.webp"
                   alt="/"
                 />
               </div>

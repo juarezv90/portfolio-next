@@ -17,7 +17,8 @@ const Navbar = () => {
   const router = useRouter();
 
   useEffect(() => {
-    if (router.asPath === '/Mtgapp') {
+    if (router.asPath === '/Mtgapp'
+    || router.asPath === '/NetflixClone') {
       setNavBG('transparent')
       setLinkColor('#ecf0f3')
     } else {

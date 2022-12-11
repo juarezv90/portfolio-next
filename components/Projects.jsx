@@ -12,6 +12,7 @@ const Projects = () => {
         <h2 className="py-4">What I've Built</h2>
         <div className="grid md:grid-cols-2 gap-8">
             <ProjectsItems type={projects.mox.primary_lang} title={projects.mox.title} background={projects.mox.image} projectUrl="/Mtgapp" />
+            <ProjectsItems type={projects.netflix.primary_lang} title={projects.netflix.title} background={projects.netflix.image} projectUrl="/NetflixClone" />
         </div>
       </div>
     </div>
