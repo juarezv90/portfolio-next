@@ -3,15 +3,14 @@ export const projects = {
     title: "Crammed Mox",
     primary_lang: "Next JS",
     languages: [
-      "Javascript",
-      "HTML",
+      "Javascript",,
       "Next JS",
       "Tailwind CSS",
       "Scryfall API"
     ],
     demo: "https://mtgnext.vercel.app/",
     code: "https://github.com/juarezv90/CrammedMox.git",
-    objective:() => {return <>This project is a personal project still in the works. It is an application that I developed to help with deck creation for a card game called Magic the Gathering. It utilizes the scryfall database to collect card data. There multiple functions for request for card data and calculations of deck power. Application was developed using Next.Js and CSS is being rendered using Tailwind CSS.</>},
+    objective:() => {return <>This project is a personal project still in the works. It is an application that I developed to help with deck creation for a card game called Magic the Gathering. It utilizes the scryfall database to collect card data. There are multiple functions for requesting card data and calculations of deck power. Application was developed using Next.Js and CSS is being rendered using Tailwind CSS.</>},
     image: "/assets/projects/crommedmox.jpg"
   },
   netflix: {

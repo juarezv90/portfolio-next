@@ -18,7 +18,7 @@ const About = () => {
             I've always had a fascination with computers from since growing up
             around developing technologies. My first interest in web design was
             when I found a book on website building in the 4th grade in my
-            schools library. I remember how excited I was when I built my first
+            school's library. I remember how excited I was when I built my first
             static web page and showed it off to my parents.
           </p>
           <p className="py-2 text-gray-600">
