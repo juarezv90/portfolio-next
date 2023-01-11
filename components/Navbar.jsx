@@ -44,7 +44,7 @@ const Navbar = () => {
   };
 
   return (
-    <div style={{backgroundColor: `${navBG}`}} className={shadow ? "fixed w-full h-20 shadow-xl z-[1000]" : 'fixed w-full h-20 z-[100]'}>
+    <div style={{backgroundColor: `${navBG}`}} className={shadow ? "fixed w-full h-20 shadow-xl z-[1000] top-[5px]" : 'fixed w-full h-20 z-[100] top-[5px]'}>
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
         <Link href='/'>
         <Image className="pt-1 pb-1" src={logo} alt="/" width={125}/>
