@@ -3,18 +3,13 @@ import React, {useState,useEffect} from 'react'
 const ScrollBar = () => {
     const [scrollWidth, setScrollWidth] = useState(0);
 
-    function setScrollLoad() {
-        let location = window.scrollY
-        console.log(window.pageYOffset);
-    }
-
     useEffect(() => {
         window.addEventListener('scroll', () => {
-            setScrollWidth((window.scrollY/(document.body.offsetHeight-window.innerHeight))*100)
+            setScrollWidth((window.scrollY/(document.body.scrollHeight-window.innerHeight))*100)
         })
         return (
             window.removeEventListener('scroll',  () => {
-                setScrollWidth((window.scrollY/(document.body.offsetHeight-window.innerHeight))*100)
+                setScrollWidth((window.scrollY/(document.body.scrollHeight-window.innerHeight))*100)
             })
         )
     }, []);
