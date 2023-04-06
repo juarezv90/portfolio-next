@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
@@ -30,30 +30,42 @@ const Contact = () => {
     }));
   };
 
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setMessageSent(await sendContactForm(contactState.values));
-    setContactState(initState);
-    setTimeout(() => {
-      setMessageSent(null);
-    }, 1500);
+    try {
+      await sendContactForm(contactState.values);
+      setMessageSent(true);
+      setContactState(initState);
+      setTimeout(() => {
+        setMessageSent(null);
+      }, 1500);
+    } catch (error) {
+      setContactState((prev)=>({
+        ...prev,
+        error: error.message,
+      }))
+      setTimeout(() => {
+        let trimSet = {...contactState};
+        delete trimSet.error;
+        setContactState(trimSet);
+      }, 1500);
+    }
   };
 
-  const { values } = contactState;
+  const { values, error } = contactState;
 
   return (
     <div id="contact" className="w-full lg:h-screen">
-      {messageSent?.ok && (
+      {messageSent && (
         <h1 className="fixed text-lg top-[20px] left-[50%] translate-x-[-50%] z-[1000] bg-green-600 bg-opacity-70 w-[40%] text-center py-2 rounded-lg">
           Message delivered
         </h1>
       )}
-      {!messageSent?.ok && messageSent != null && (
+      {error && 
         <h1 className="fixed text-lg top-[20px] left-[50%] translate-x-[-50%] z-[1000] bg-red-600 bg-opacity-70 w-[40%] text-center py-2 rounded-lg">
-          Message failed to Send
+         {error}
         </h1>
-      )}
+      }
       <div className="max-w=[1240px] m-auto px-2 py-16 w-full">
         <p className=" text-xl tracking-widest uppercase text-[#5651e5]">
           Contact
