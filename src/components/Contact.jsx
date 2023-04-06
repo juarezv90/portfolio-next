@@ -1,13 +1,59 @@
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
+import { sendContactForm } from "../../lib/api";
+
+const initialState = {
+  name: "",
+  email: "",
+  phone: "",
+  subject: "",
+  message: ""
+};
+
+const initState = { values: initialState };
 
 const Contact = () => {
+  const [contactState, setContactState] = useState(initState);
+  const [messageSent, setMessageSent] = useState(null);
+
+  const changeHandler = ({ target }) => {
+    setContactState((prev) => ({
+      ...prev,
+      values: {
+        ...prev.values,
+        [target.name]: target.value
+      }
+    }));
+  };
+
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setMessageSent(await sendContactForm(contactState.values));
+    setContactState(initState);
+    setTimeout(() => {
+      setMessageSent(null);
+    }, 1500);
+  };
+
+  const { values } = contactState;
+
   return (
     <div id="contact" className="w-full lg:h-screen">
+      {messageSent?.ok && (
+        <h1 className="fixed text-lg top-[20px] left-[50%] translate-x-[-50%] z-[1000] bg-green-600 bg-opacity-70 w-[40%] text-center py-2 rounded-lg">
+          Message delivered
+        </h1>
+      )}
+      {!messageSent?.ok && messageSent != null && (
+        <h1 className="fixed text-lg top-[20px] left-[50%] translate-x-[-50%] z-[1000] bg-red-600 bg-opacity-70 w-[40%] text-center py-2 rounded-lg">
+          Message failed to Send
+        </h1>
+      )}
       <div className="max-w=[1240px] m-auto px-2 py-16 w-full">
         <p className=" text-xl tracking-widest uppercase text-[#5651e5]">
           Contact
@@ -63,11 +109,7 @@ const Contact = () => {
 
           <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4">
             <div className="p-4">
-              <form
-                action="https://formspree.io/f/meqdkngo"
-                method="POST"
-                id="my-form"
-              >
+              <form onSubmit={handleSubmit}>
                 <div className="grid md:grid-cols-2 gap-4 w-full py-2">
                   <div className="flex flex-col">
                     <label className="uppercase text-sm py-2">Name</label>
@@ -75,6 +117,8 @@ const Contact = () => {
                       name="name"
                       type="text"
                       className="border-2 rounded-lg p-3 flex border-gray-300"
+                      value={values.name}
+                      onChange={changeHandler}
                     />
                   </div>
                   <div className="flex flex-col">
@@ -85,6 +129,8 @@ const Contact = () => {
                       name="phone"
                       type="text"
                       className="border-2 rounded-lg p-3 flex border-gray-300"
+                      value={values.phone}
+                      onChange={changeHandler}
                     />
                   </div>
                 </div>
@@ -94,6 +140,8 @@ const Contact = () => {
                     name="email"
                     type="email"
                     className="border-2 rounded-lg p-3 flex border-gray-300"
+                    value={values.email}
+                    onChange={changeHandler}
                   />
                 </div>
                 <div className=" flex flex-col py-2">
@@ -102,6 +150,8 @@ const Contact = () => {
                     name="subject"
                     type="text"
                     className="border-2 rounded-lg p-3 flex border-gray-300"
+                    value={values.subject}
+                    onChange={changeHandler}
                   />
                 </div>
                 <div className=" flex flex-col py-2">
@@ -110,6 +160,8 @@ const Contact = () => {
                     name="message"
                     className="border-2 rounded-lg p-3 border-gray-300"
                     rows={10}
+                    value={values.message}
+                    onChange={changeHandler}
                   ></textarea>
                 </div>
                 <button

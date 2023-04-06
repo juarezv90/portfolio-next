@@ -4,7 +4,7 @@ import Link from "next/link";
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
-import logo from "../public/assets/logo/logowtitle.svg";
+import logo from "../../public/assets/logo/logowtitle.svg";
 import { useRouter } from "next/router";
 
 
