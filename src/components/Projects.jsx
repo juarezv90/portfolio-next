@@ -13,6 +13,7 @@ const Projects = () => {
         <div className="grid md:grid-cols-2 gap-8">
             <ProjectsItems type={projects.mox.primary_lang} title={projects.mox.title} background={projects.mox.image} projectUrl="/Mtgapp" />
             <ProjectsItems type={projects.netflix.primary_lang} title={projects.netflix.title} background={projects.netflix.image} projectUrl="/NetflixClone" />
+            <ProjectsItems type={projects.blog.primary_lang} title={projects.blog.title} background={projects.blog.image} projectUrl="/Blog" />
         </div>
       </div>
     </div>
