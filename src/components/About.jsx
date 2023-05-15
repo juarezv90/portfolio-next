@@ -25,10 +25,10 @@ const About = () => {
             <Link href="/#projects">Check out some of my latest projects.</Link>
           </p>
         </div>
-        <div className="max-w-[300px] h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300">
+        <div className="max-w-[300px] h-auto m-auto shadow-xl shadow-gray-400 rounded-full overflow-hidden flex items-center justify-center p-4 hover:scale-105 ease-in duration-300">
           <Image
-            className="rounded-xl"
-            src="/assets/profile.webp"
+          className="rounded-full bg-[#5651e5] bg-opacity-60"
+            src="/assets/self.png"
             alt="/"
             width={300}
             height={200}

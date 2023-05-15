@@ -77,14 +77,14 @@ const Contact = () => {
             <div className=" lg:p-4 h-full">
               <div>
                 <img
-                  className="rounded-xl hover:scale-105 ease-in duration-300 max-h-[500px] mx-auto"
-                  src="/assets/profile.webp"
+                  className="rounded-full hover:scale-105 ease-in duration-300 max-h-[500px] mx-auto bg-[#5651e5] bg-opacity-70"
+                  src="/assets/self.png"
                   alt="/"
                 />
               </div>
               <div>
                 <h2 className="py-2">Victor J</h2>
-                <p>Frontend Developer</p>
+                <p>Frontend Developer/Programmer</p>
                 <p className=" py-4">
                   I am available for freelance positions. Contact me and let's
                   talk
