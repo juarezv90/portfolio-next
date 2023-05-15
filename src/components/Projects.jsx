@@ -29,12 +29,12 @@ const Projects = () => {
             background={projects.blog.image}
             projectUrl="/Blog"
           />
-          <ProjectsItems
+          {/* <ProjectsItems
             type={projects.todo.primary_lang}
             title={projects.todo.title}
             background={projects.todo.image}
             projectUrl="/Todo"
-          />
+          /> */}
           <ProjectsItems
             type={projects.easybank.primary_lang}
             title={projects.easybank.title}
